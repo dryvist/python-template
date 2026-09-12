@@ -7,6 +7,7 @@
 **Objective**: Refactor the single `tests.yml` workflow into multiple dedicated-purpose workflows following Python development best practices.
 
 **Current State Analysis**:
+
 - Existing `tests.yml` workflow has mixed responsibilities (testing, linting, type checking)
 - Linting/type checking currently uses `continue-on-error: true` which allows broken code to pass
 - Need separation of concerns and proper failure handling
@@ -32,6 +33,7 @@
    - **Behavior**: Must pass completely or workflow fails (remove `continue-on-error`)
 
 **Key Improvements**:
+
 - Separation of concerns: Testing vs Code Quality
 - Fail fast: Code quality failures block commits
 - Auto-fixing: Black/isort auto-format before validation
@@ -39,6 +41,7 @@
 - Best practices: Follow GitHub Actions naming conventions
 
 **Implementation Plan**:
+
 1. ✅ Set up local pre-commit environment for testing
 2. ✅ Update PLANNING.md with detailed plan
 3. ✅ Get user acceptance and commit to new branch
