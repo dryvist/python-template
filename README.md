@@ -1,8 +1,8 @@
 # Python Project Template
 
-[![Code Quality](https://github.com/JacobPEvans/python-template/actions/workflows/ci.yml/badge.svg)](https://github.com/JacobPEvans/python-template/actions/workflows/ci.yml)
-[![Python Tests](https://github.com/JacobPEvans/python-template/actions/workflows/tests.yml/badge.svg)](https://github.com/JacobPEvans/python-template/actions/workflows/tests.yml)
-[![Code Coverage](https://codecov.io/github/JacobPEvans/python-template/graph/badge.svg?token=IFMKOLPQE9)](https://codecov.io/github/JacobPEvans/python-template)
+[![Code Quality][code-quality-badge]][code-quality-link]
+[![Python Tests][python-tests-badge]][python-tests-link]
+[![Code Coverage][code-coverage-badge]][code-coverage-link]
 
 A minimal Python project template following modern best practices and industry
 standards. Use it as the starting point for a new Python package: clone it,
@@ -178,3 +178,10 @@ pre-commit run --all-files
 
 > Part of a [larger ecosystem of ~40 repos](https://docs.jacobpevans.com) —
 > see how it all fits together.
+
+[code-quality-badge]: https://github.com/dryvist/python-template/actions/workflows/ci.yml/badge.svg
+[code-quality-link]: https://github.com/dryvist/python-template/actions/workflows/ci.yml
+[python-tests-badge]: https://github.com/dryvist/python-template/actions/workflows/tests.yml/badge.svg
+[python-tests-link]: https://github.com/dryvist/python-template/actions/workflows/tests.yml
+[code-coverage-badge]: https://codecov.io/github/dryvist/python-template/graph/badge.svg?token=IFMKOLPQE9
+[code-coverage-link]: https://codecov.io/github/dryvist/python-template

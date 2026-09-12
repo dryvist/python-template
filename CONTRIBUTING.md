@@ -25,11 +25,14 @@ By participating in this project, you agree to maintain a respectful and inclusi
 
 1. Fork the repository on GitHub
 2. Clone your fork locally:
+
    ```bash
    git clone https://github.com/YOUR_USERNAME/python-template.git
    cd python-template
    ```
+
 3. Add the upstream repository as a remote:
+
    ```bash
    git remote add upstream https://github.com/JacobPEvans/python-template.git
    ```
@@ -47,12 +50,14 @@ By participating in this project, you agree to maintain a respectful and inclusi
 **Important:** Always use a virtual environment to isolate project dependencies from your system Python.
 
 1. Create and activate a virtual environment:
+
    ```bash
    python -m venv .venv
    source .venv/bin/activate  # On Windows: .venv\Scripts\activate
    ```
 
 2. Install development dependencies (inside the activated virtual environment):
+
    ```bash
    # Using make (recommended)
    make install-dev
@@ -63,6 +68,7 @@ By participating in this project, you agree to maintain a respectful and inclusi
    ```
 
 3. Verify your setup:
+
    ```bash
    make check  # Or: pytest && ruff check src/ tests/
    ```
@@ -196,7 +202,7 @@ Use descriptive branch names:
 
 Follow conventional commit format:
 
-```
+```text
 type(scope): description
 
 [optional body]
@@ -205,6 +211,7 @@ type(scope): description
 ```
 
 Types:
+
 - `feat`: New feature
 - `fix`: Bug fix
 - `docs`: Documentation changes
@@ -214,7 +221,8 @@ Types:
 - `chore`: Maintenance tasks
 
 Examples:
-```
+
+```text
 feat(validators): add email validation function
 
 fix(greet): handle None input correctly
@@ -227,11 +235,13 @@ test(main): add hypothesis tests for greet function
 ### Before Submitting
 
 1. Ensure all tests pass with 100% coverage:
+
    ```bash
    make test-cov
    ```
 
 2. Run all quality checks:
+
    ```bash
    make all
    ```
