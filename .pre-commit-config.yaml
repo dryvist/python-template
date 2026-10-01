@@ -36,7 +36,7 @@ repos:
   # Ruff - Fast all-in-one Python linter and formatter
   # Replaces: flake8, isort, pylint, pyupgrade, black, and many more
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.8.0
+    rev: v0.16.9
     hooks:
       - id: ruff
         args: ['--fix', '--exit-non-zero-on-fix']
