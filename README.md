@@ -103,7 +103,7 @@ python-template/
 ├── .github/
 │   └── workflows/
 │       ├── tests.yml          # GitHub Actions - Testing
-│       └── ci.yml             # GitHub Actions - Code Quality
+│       └── ci-gate.yml        # GitHub Actions - Org CI gate (profile: python)
 ├── src/
 │   └── hello_world/
 │       ├── __init__.py        # Package initialization
@@ -153,8 +153,8 @@ pytest --cov=src/hello_world --cov-report=html
 Two GitHub Actions workflows guard quality, mirrored locally by pre-commit:
 
 - **`tests.yml`** — runs pytest with coverage across Python 3.11–3.13.
-- **`ci.yml`** — enforces formatting, linting, and type checking with
-  auto-fixing and validation.
+- **`ci-gate.yml`** — calls the org CI gate with `profile: python`, which runs
+  the Python CI and Python Security jobs and reports one `Merge Gate` status.
 
 Pre-commit runs the same formatting and linting (Ruff) and type
 checking (mypy) on every `git commit`. If a check fails, the commit is blocked
@@ -179,8 +179,8 @@ pre-commit run --all-files
 > Part of a [larger ecosystem of ~40 repos](https://docs.jacobpevans.com) —
 > see how it all fits together.
 
-[code-quality-badge]: https://github.com/dryvist/python-template/actions/workflows/ci.yml/badge.svg
-[code-quality-link]: https://github.com/dryvist/python-template/actions/workflows/ci.yml
+[code-quality-badge]: https://github.com/dryvist/python-template/actions/workflows/ci-gate.yml/badge.svg
+[code-quality-link]: https://github.com/dryvist/python-template/actions/workflows/ci-gate.yml
 [python-tests-badge]: https://github.com/dryvist/python-template/actions/workflows/tests.yml/badge.svg
 [python-tests-link]: https://github.com/dryvist/python-template/actions/workflows/tests.yml
 [code-coverage-badge]: https://codecov.io/github/dryvist/python-template/graph/badge.svg?token=IFMKOLPQE9
