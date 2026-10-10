@@ -36,11 +36,12 @@ git mv src/hello_world src/<your_package_name>
 
 ## 4. CI workflows (`.github/workflows/`)
 
-- `ci.yml` and `tests.yml` reference `JacobPEvans/python-template` in the
-  Codecov `slug:` — replace with `<your-org>/<your-repo>`
+- `tests.yml` references `dryvist/python-template` in the Codecov `slug:` —
+  replace with `<your-org>/<your-repo>`
 - Confirm the Python `matrix` in `tests.yml` matches the versions you want
-  to support; the single-version jobs in `ci.yml` use the latest released
-  stable (`3.13`) — bump when you upgrade
+  to support; the lint, type, security and test checks run in the org
+  `ci-gate.yml` (`profile: python`), which picks its Python versions from
+  the shared default
 
 ## 5. Strip template scaffolding
 

@@ -25,6 +25,7 @@ dev = [
     # Linting & Formatting (Ruff replaces black, flake8, isort, pylint, pyupgrade)
     "ruff>=0.8.0",
     # Type checking
+    "pyright>=1.1.400",  # Pre-commit type-check hook (org standard)
     "mypy>=1.16.1",
     # Security
     "bandit[toml]>=1.8.0",
