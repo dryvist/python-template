@@ -29,12 +29,12 @@ tests/              # pytest suite (mirrors src/)
 
 - **Linting**: `ruff check --fix` (replaces flake8/isort/pylint)
 - **Formatting**: `ruff format`
-- **Types**: `mypy src/` (strict mode via pyproject.toml)
-- **Security**: `bandit -r src/` + `pip-audit`
+- **Types**: `pyright` via pre-commit (`.venv/bin/pyright`); `make type-check` still runs mypy
+- **Security**: `bandit -r src/` (pre-commit) + `pip-audit` (org gate)
 - **Tests**: `pytest --cov=src/hello_world` — 100% coverage expected
-- **Pre-commit**: hooks run ruff, mypy, bandit, trailing-whitespace on every commit
+- **Pre-commit**: hooks run ruff-check, ruff-format, pyright, bandit, detect-secrets, trailing-whitespace on every commit
 
 ## CI Workflows
 
-- `ci.yml` — Code Quality (ruff + mypy + bandit + pip-audit + docstring check)
+- `ci-gate.yml` — org gate (`profile: python`): pre-commit lint/format/type, Python CI test matrix, pip-audit
 - `tests.yml` — Tests across Python 3.11/3.12/3.13 with Codecov upload
