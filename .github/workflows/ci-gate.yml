@@ -33,3 +33,5 @@ jobs:
     uses: dryvist/.github/.github/workflows/_ci-gate.yml@v1
     with:
       profile: python
+      # Matches `requires-python` in pyproject.toml.
+      python_ci_versions: '["3.11", "3.12", "3.13", "3.14"]'
