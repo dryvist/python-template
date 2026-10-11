@@ -102,7 +102,7 @@ print(greet("Python"))  # Output: Hello, Python!
 python-template/
 ├── .github/
 │   └── workflows/
-│       ├── tests.yml          # GitHub Actions - Testing
+│       ├── tests.yml          # GitHub Actions - Testing (skips Markdown-only changes)
 │       └── ci-gate.yml        # GitHub Actions - Org CI gate (profile: python)
 ├── src/
 │   └── hello_world/
