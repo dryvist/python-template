@@ -180,6 +180,7 @@ We use Hypothesis for property-based testing. When appropriate, add hypothesis t
 ```python
 from hypothesis import given, strategies as st
 
+
 @given(st.text(min_size=1, max_size=50))
 def test_function_with_hypothesis(value: str) -> None:
     """Property-based test for function."""
