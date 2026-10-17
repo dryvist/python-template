@@ -86,7 +86,7 @@ repos:
 
   # Bandit - Security linter (Ruff has S rules but Bandit is more comprehensive)
   - repo: https://github.com/PyCQA/bandit
-    rev: 1.8.0
+    rev: 1.9.4
     hooks:
       - id: bandit
         args: ['-c', 'pyproject.toml', '-r', 'src/']
