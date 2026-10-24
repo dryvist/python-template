@@ -230,3 +230,9 @@ skips = ["B101"]  # Skip assert warnings (we use them appropriately)
 
 [tool.bandit.assert_used]
 skips = ["**/test_*.py", "**/tests/**"]
+
+[tool.uv]
+exclude-newer = "7 days"
+# Cutoffs retain reviewed releases that fix published advisories.
+exclude-newer-package = { certifi = "2026-10-20T02:24:17Z", filelock = "2026-10-19T00:33:44Z", virtualenv = "2026-10-18T07:06:35Z" }
+required-version = ">=0.9.17"
