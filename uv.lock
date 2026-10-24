@@ -1,5 +1,5 @@
 version = 1
-revision = 3
+revision = 5
 requires-python = ">=3.11"
 resolution-markers = [
     "python_full_version >= '3.15'",
@@ -12,8 +12,8 @@ exclude-newer-span = "P7D"
 
 [options.exclude-newer-package]
 certifi = "2026-10-20T02:24:17Z"
-virtualenv = "2026-10-18T07:06:35Z"
 filelock = "2026-10-19T00:33:44Z"
+virtualenv = "2026-10-18T07:06:35Z"
 
 [[package]]
 name = "ast-serialize"
